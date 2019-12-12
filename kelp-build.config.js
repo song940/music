@@ -1,0 +1,1 @@
+exports.watch = true;
