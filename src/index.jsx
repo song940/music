@@ -80,90 +80,32 @@ const List = ({ children }) => {
   );
 };
 
-const album1 = {
-  id: 1,
-  title: '看见',
-  img: 'https://inews.gtimg.com/newsapp_match/0/5820332145/0'
-};
-
-
-const album2 = {
-  id: 2,
-  title: '我爱南京',
-  img: 'https://inews.gtimg.com/newsapp_match/0/3497031697/0'
-};
-
-const album3 = {
-  id: 3,
-  title: '梵高先生',
-  img: 'https://inews.gtimg.com/newsapp_match/0/5820332143/0'
-};
-
-const albums = [
-  album1,
-  album2,
-  album3,
-  album2,
-  album3,
-  album1,
-  album2,
-];
-
-const Progress = () => {
-  return (
-    <div className="progress">
-      <div className="progress-bar"></div>
-    </div>
-  );
-};
-
-const Player = ({ song }) => {
-  const { id, title, artist, url, album = {} } = song || {};
-  if (title) {
-    document.title = `${title} - ${artist}`;
-  }
-  return (
-    <div className="player" >
-      <div className="player-album" style={{ backgroundImage: `url(${album.img})` }} ></div>
-      <div className="player-content">
-        <h4 className="player-title">{title}</h4>
-        <span>{artist} - {album.title}</span>
-        <audio autoPlay src={url} />
-      </div>
-      <Progress />
-    </div>
-  );
-};
-
 const Home = () => {
-  const [current, play] = useState({});
-  const [ songs, setSongs ] = useState([]);
+  const [list, setList] = useState([]);
   useEffect(() => {
     fetch('./data/data.json')
-    .then(res => res.json())
-    .then(setSongs);
+      .then(res => res.json())
+      .then(setList);
   }, []);
+  const render = ({ type, list }) => {
+    return list.map((item, i) => {
+      switch (type) {
+        case 'songs':
+          return <Song key={i} song={item} />;
+        case 'albums':
+          return <Album key={i} album={item} />;
+      }
+    })
+  };
   return (
     <div>
       <Header />
       <Banner />
-      <Panel title="推荐歌单" >
-        {
-          albums.map((album, i) => <Album key={i} album={album} />)
-        }
-      </Panel>
-      <Panel title="最新专辑" >
-        {
-          albums.map((album, i) => <Album key={i} album={album} />)
-        }
-      </Panel>
-      <Panel title="热门歌曲" >
-        <List>
-          {
-            songs.map((song, i) => <Song key={i} song={song} play={play} />)
-          }
-        </List>
-      </Panel>
+      {
+        list && list.map((item, i) => (
+          <Panel key={i} title={item.title} >{render(item)}</Panel>
+        ))
+      }
     </div>
   );
 };
@@ -178,6 +120,5 @@ const App = () => {
     </Router>
   )
 };
-
 
 ReactDOM.render(<App />, document.getElementById('app'))
