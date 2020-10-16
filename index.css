@@ -1,0 +1,25 @@
+@import url(https://lsong.org/css/stylesheet.css);
+@import url(https://lsong.org/stylesheets/panel.css);
+
+.albums .panel-body {
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.album {
+  margin: auto;
+  padding-right: 10px;
+  display: inline-block;
+}
+
+.album-name {
+  margin: 8px 0;
+}
+
+.album-cover {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  background: #666;
+  background-size: cover;
+}
