@@ -1,0 +1,1 @@
+export * from 'https://lsong.org/tinyact/src/index.js';

@@ -4,27 +4,33 @@
     "type": "albums",
     "list": [
       {
-        "title": "看见",
+        "id": 1,
+        "name": "看见",
         "img": "https://inews.gtimg.com/newsapp_match/0/5820332145/0"
       },
       {
-        "title": "我爱南京",
+        "id": 2,
+        "name": "我爱南京",
         "img": "https://inews.gtimg.com/newsapp_match/0/3497031697/0"
       },
       {
-        "title": "梵高先生",
+        "id": 3,
+        "name": "梵高先生",
         "img": "https://inews.gtimg.com/newsapp_match/0/5820332143/0"
       },
       {
-        "title": "看见",
+        "id": 4,
+        "name": "看见",
         "img": "https://inews.gtimg.com/newsapp_match/0/5820332145/0"
       },
       {
-        "title": "我爱南京",
+        "id": 5,
+        "name": "我爱南京",
         "img": "https://inews.gtimg.com/newsapp_match/0/3497031697/0"
       },
       {
-        "title": "梵高先生",
+        "id": 6,
+        "name": "梵高先生",
         "img": "https://inews.gtimg.com/newsapp_match/0/5820332143/0"
       }
     ]
@@ -34,27 +40,27 @@
     "type": "albums",
     "list": [
       {
-        "title": "看见",
+        "name": "看见",
         "img": "https://inews.gtimg.com/newsapp_match/0/5820332145/0"
       },
       {
-        "title": "我爱南京",
+        "name": "我爱南京",
         "img": "https://inews.gtimg.com/newsapp_match/0/3497031697/0"
       },
       {
-        "title": "梵高先生",
+        "name": "梵高先生",
         "img": "https://inews.gtimg.com/newsapp_match/0/5820332143/0"
       },
       {
-        "title": "看见",
+        "name": "看见",
         "img": "https://inews.gtimg.com/newsapp_match/0/5820332145/0"
       },
       {
-        "title": "我爱南京",
+        "name": "我爱南京",
         "img": "https://inews.gtimg.com/newsapp_match/0/3497031697/0"
       },
       {
-        "title": "梵高先生",
+        "name": "梵高先生",
         "img": "https://inews.gtimg.com/newsapp_match/0/5820332143/0"
       }
     ]

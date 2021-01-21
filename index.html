@@ -9,39 +9,12 @@
   <script type="module" src="./index.js"></script>
 </head>
 
-<script id="tmpl-section" type="text/template">
-  <div class="panel ${type}">
-      <div class="panel-header">${title}</div>
-      <div class="panel-body">${content}</div>
-    </div>
-</script>
-
-<script id="tmpl-album" type="text/template">
-
-  <div class="album">
-    <div class="album-cover" style="background-image: url(${img})" ></div>
-    <h5 class="album-name" >${title}</h5>
-  </div>
-
-</script>
-
-<script id="tmpl-song" type="text/template">
-
-  <div class="song">
-    <div>
-      <h4 class="song-title">${name}</h4>
-      <p class="song-info">${artist.map(x => x.name).join('/')} - ${album.name}</p>
-    </div>
-  </div>
-
-</script>
-
 <body class="container">
   <header class="header">
     <h1>Liu Song's Music</h1>
     <nav class="nav nav-bar">
-      <a href="//lsong.org">home</a>
-      <a href="//lsong.org/blog">blog</a>
+      <a href="#/">home</a>
+      <a href="//lsong.org/posts">blog</a>
       <a href="//lsong.org/tv">tv</a>
       <a href="//lsong.org/music">music</a>
       <a href="//lsong.org/photo">photo</a>
