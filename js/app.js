@@ -1,9 +1,9 @@
 import { ready } from 'https://lsong.org/scripts/dom.js';
 import { serialize } from 'https://lsong.org/scripts/form.js';
 import { registerServiceWorker } from 'https://lsong.org/scripts/service-worker.js';
-import { h, render, useState, useEffect, List } from 'https://lsong.org/scripts/components/index.js';
-import { playlist_top, playlist_detail, lyric, search, get_song_url } from './api.js';
+import { h, render, useState, useEffect, List } from 'https://lsong.org/scripts/react/index.js';
 import { parse, cue } from 'https://lsong.org/lyric.js/index.js';
+import { playlist_top, playlist_detail, lyric, search, get_song_url } from './api.js';
 
 import 'https://lsong.org/js/application.js';
 
