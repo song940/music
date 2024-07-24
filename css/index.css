@@ -2,10 +2,6 @@
 @import url(//lsong.org/stylesheets/list.css);
 @import url(//lsong.org/stylesheets/panel.css);
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 .search input {
   width: 100%;
   box-sizing: border-box;
@@ -39,6 +35,10 @@ ul {
   list-style: none;
   width: 100%;
   overflow: auto;
+}
+
+.albums ::-webkit-scrollbar {
+  display: none;
 }
 
 .album {
