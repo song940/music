@@ -1,10 +1,8 @@
 import { ready } from 'https://lsong.org/scripts/dom.js';
 import { serialize } from 'https://lsong.org/scripts/form.js';
-import { h, render, useState, useEffect, Panel, List, ListItem } from 'https://lsong.org/scripts/react/index.js';
-import { playlist_top, playlist_detail, lyric, search, get_song_url } from './api.js';
+import { h, render, useState, useEffect, List, ListItem } from 'https://lsong.org/scripts/react/index.js';
+import { playlist_top, playlist_detail, lyric, search, get_song_url } from './163-music.js';
 import { parse, cue } from 'https://lsong.org/lyric.js/index.js';
-
-import 'https://lsong.org/js/application.js';
 
 const audio = new Audio();
 
@@ -97,7 +95,7 @@ const Playlist = ({ onClick, playlist }) => {
   if (!playlist) return;
   return h('div', {}, [
     h('h3', null, playlist.name),
-    h(List, {}, playlist.tracks.map((track, i) => 
+    h(List, {}, playlist.tracks.map((track, i) =>
       h(ListItem, null, h(Track, { id: i + 1, track, onClick: () => onClick(track, i, playlist) }))
     )),
   ]);
